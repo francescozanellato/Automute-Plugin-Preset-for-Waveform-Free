@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PRESET presetVersion="2" type="plugin" subtype="rack" name="Automute (similar to Ice9 Automute)"
+        tags="Plugin|Volume|Automute|Ice9" description="Automute (similar to Ice9 Automute)">
+  <PLUGIN type="rack" rackType="1066" id="1067" enabled="1" quickParamName="threshold">
+    <MODIFIERASSIGNMENTS/>
+    <RACK id="1066" name="Automute">
+      <WINDOWSTATE windowPos="784 233 602 528" active="1" windowLocked="1"/>
+      <OUTPUT name="midi output"/>
+      <OUTPUT name="Left"/>
+      <OUTPUT name="Right"/>
+      <INPUT name="midi input"/>
+      <INPUT name="Left"/>
+      <INPUT name="Right"/>
+      <MODIFIERS/>
+      <PLUGININSTANCE x="0.32" y="0.08163265306122448">
+        <PLUGIN type="gate" windowLocked="1" id="1032" enabled="1" windowX="642"
+                windowY="347" threshold="-44.70587921142578" presetDirty="1"
+                attack="0.2199999988079071" hold="36.70000076293945" release="3.400000095367432"
+                presetName="Gate: Not Hard" presetPath="C:\Users\fraz3\AppData\Roaming\Tracktion\Waveform\Factory Presets\Gate\Gate Not Hard.trkpreset">
+          <MODIFIERASSIGNMENTS/>
+        </PLUGIN>
+      </PLUGININSTANCE>
+      <CONNECTION src="0" dst="1032" srcPin="1" dstPin="1"/>
+      <CONNECTION src="0" dst="1032" srcPin="2" dstPin="2"/>
+      <CONNECTION src="0" dst="1032" srcPin="0" dstPin="0"/>
+      <CONNECTION src="1032" dst="0" srcPin="0" dstPin="0"/>
+      <PLUGININSTANCE x="0.716" y="0.3346938775510204">
+        <PLUGIN type="volume" windowLocked="1" id="1068" enabled="1" polarity="1"
+                volume="0.740818202495575">
+          <MODIFIERASSIGNMENTS/>
+        </PLUGIN>
+      </PLUGININSTANCE>
+      <CONNECTION src="1032" dst="1068" srcPin="1" dstPin="1"/>
+      <CONNECTION src="1032" dst="1068" srcPin="2" dstPin="2"/>
+      <CONNECTION src="1068" dst="0" srcPin="2" dstPin="2"/>
+      <CONNECTION src="0" dst="0" srcPin="1" dstPin="1"/>
+      <CONNECTION src="0" dst="0" srcPin="2" dstPin="2"/>
+      <CONNECTION src="1068" dst="0" srcPin="1" dstPin="1"/>
+    </RACK>
+  </PLUGIN>
+</PRESET>
